@@ -1,0 +1,29 @@
+{
+    "parser": "babel-eslint",
+    "rules": {
+        "strict": [2, "global"],
+        "indent": [
+            2,
+            4
+        ],
+        "semi": [
+            2,
+            "always"
+        ],
+        "quotes": [2, "single", "avoid-escape"],
+        "no-console" : 2,
+        "no-alert": 2,
+        "keyword-spacing": [2],
+        "space-before-blocks": [2, "always"],
+        "no-multiple-empty-lines": [2, {"max": 2, "maxEOF": 2}],
+        "no-unused-vars" : 0
+    },
+    "env": {
+        "es6": true,
+        "node" : true
+    },
+    "extends": "eslint:recommended",
+    "ecmaFeatures": {
+        "experimentalObjectRestSpread": true
+    }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+    <head>
+        <meta name="dtb:uid" content="<%= id %>" />
+        <meta name="dtb:generator" content="epub-gen"/>
+        <meta name="dtb:depth" content="1"/>
+        <meta name="dtb:totalPageCount" content="0"/>
+        <meta name="dtb:maxPageNumber" content="0"/>
+    </head>
+    <docTitle>
+        <text><%= title %></text>
+    </docTitle>
+    <docAuthor>
+        <text><%= author %></text>
+    </docAuthor>
+    <navMap>
+        <% chapters.forEach(function(chapter, cIndex){ %>
+            <navPoint id="item_<%= cIndex %>" class="subChapter">
+                <navLabel>
+                    <text><%= (1+cIndex) + ". " + (chapter.title || "Chapter " + (1+index))%></text>
+                </navLabel>
+                <content src="<%= chapter.subChapters[0].href %>"/>
+            <% chapter.subChapters.forEach(function(subChapter, sIndex){ %>
+            <navPoint id="<%= subChapter.id %>" class="subChapter">
+                <navLabel>
+                    <text><%= (1+cIndex) + "." + (1+sIndex) + ". " + (subChapter.title || "Sub Chapter " + (1+sIndex))%></text>
+                </navLabel>
+                <content src="<%= subChapter.href %>"/>
+            </navPoint>
+        <% }) %>
+            </navPoint>
+        <% }) %>
+
+    </navMap>
+</ncx>

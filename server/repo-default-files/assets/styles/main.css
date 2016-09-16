@@ -1,0 +1,161 @@
+html, body, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html {
+    overflow-y: hidden;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+b {
+    font-weight: 600;
+}
+
+i {
+    font-style: italic;
+}
+
+html {
+    font-size: 19px;
+}
+
+body {
+    line-height: 1.422em;
+    padding: 0 40px 1.5em 40px;
+    margin: 0;
+}
+
+sup {
+    line-height: normal;
+    font-size: 0.7em;
+    vertical-align: super;
+}
+
+sub {
+    line-height: 1em;
+    font-size: 0.7em;
+    vertical-align: sub;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+ol {
+    padding-left: 2em;
+    list-style-type: decimal;
+    margin: 1em 0;
+}
+
+ol > li {
+    font-weight: 400;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 2em;
+    margin: 1em 0;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    border-spacing: 0;
+}
+
+table tbody tr td {
+    border: 1px solid #dddddd;
+    padding: 0.2em 0.5em;
+}
+
+table td {
+    padding: 0.4em 0.5em;
+}
+
+
+table thead tr td {
+    font-weight: 700;
+}
+
+a {
+    color: #006bb2;
+    text-decoration: none;
+}
+
+header {
+    margin-top : 40px;
+}
+
+
+
+header h1 {
+    font-family: "Whitney A", "Whitney B", Whitney, Verdana, Helvetica, sans;
+    font-size: 1.8em;
+    font-weight: 600;
+    line-height: 1.2em;
+    color: #083157;
+    margin-top: 1em;
+}
+
+body > h2, section > h2, header > h2 {
+    font-family: "Whitney A", "Whitney B", Whitney, Verdana, Helvetica, sans;
+    font-size: 1.6em;
+    font-weight: 600;
+    line-height: 1.1em;
+    margin: 1em 0 0.5em 0;
+    color: #0a6c87;
+}
+
+h2 + h3 {
+    margin-top: 0.25em !important;
+}
+
+body > h3, section > h3 {
+    font-family: "Whitney A", "Whitney B", Whitney, Verdana, Helvetica, sans;
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    margin: 1em 0 0.5em 0;
+    color: #083157;
+}
+
+
+body > p:first-of-type, section > p:first-of-type, li > p:first-of-type {
+    text-indent: 0;
+}
+
+img {
+    width : 500px;
+    height : 200px;
+}

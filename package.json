@@ -1,0 +1,78 @@
+{
+  "name": "API-Server",
+  "version": "1.0.0",
+  "description": "Tricon Publish API Server",
+  "main": "index.html",
+  "directories": {
+    "app": "app",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "cd server && node server.js",
+    "test": "gulp test;"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Elephant Ventures",
+  "license": "BSD",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "https://github.com/ElephantVentures/mentored",
+  "devDependencies": {
+    "babel-eslint": "^5.0.0",
+    "chai": "^3.5.0",
+    "eslint": "2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.4.5",
+    "mockgoose": "^5.3.3",
+    "rewire": "^2.5.1",
+    "sinon": "^1.17.3",
+    "supertest": "^1.2.0"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "aws-sdk": "^2.6.2",
+    "body-parser": "^1.15.0",
+    "cheerio": "^0.18.0",
+    "compression": "^1.6.1",
+    "cors": "^2.7.1",
+    "diacritics": "^1.2.1",
+    "ejs": "^2.2.4",
+    "epub-gen": "0.0.13",
+    "express": "^4.13.4",
+    "express-validator": "^2.20.2",
+    "fs-extra": "^0.30.0",
+    "get-env": "^0.4.0",
+    "merge": "^1.2.0",
+    "mime": "^1.3.4",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.12.0",
+    "mongodb": "^2.1.8",
+    "mongoose": "^4.4.7",
+    "mongoose-paginate": "^5.0.0",
+    "multer": "^1.2.0",
+    "multer-s3": "^2.3.2",
+    "q": "^1.4.1",
+    "request": "^2.69.0",
+    "rmdir": "^1.2.0",
+    "sendgrid": "^2.0.0",
+    "serve-static": "^1.10.2",
+    "simple-git": "^1.32.1",
+    "string": "^3.3.1",
+    "superagent": "^0.21.0",
+    "swig-email-templates": "^2.0.0",
+    "underscore": "^1.7.0",
+    "uslug": "^1.0.3",
+    "uuid-v4": "^0.1.0",
+    "validator": "^5.2.0",
+    "winston": "^2.2.0",
+    "winston-daily-rotate-file": "^1.0.1",
+    "wkhtmltopdf": "^0.3.3"
+  }
+}

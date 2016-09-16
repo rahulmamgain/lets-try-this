@@ -1,0 +1,69 @@
+[
+    {
+        "groupName" : "Recommended",
+        "patterns" : [
+            {
+                "name" : "Paragraph",
+                "content" : "<p>Paragraph text: Lorem ipsum dolor sit amet consectetur adipiscing elit mauris adipiscing urna quis ligula tincidunt auctor vivamus eleifend volutpat risus sit amet interdum cras tincidunt fermentum lectus vel feugiat phasellus.</p>",
+                "icon" : ""
+            },
+            {
+                "name" : "Blockquote",
+                "content" : "<blockquote><p><q>Blockquote text: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</q></p><p class=\"credit\"><span class=\"credit-title\">Credit Title</span>,<span class=\"credit-info\">Credit Info</span></p></blockquote>"
+            },
+            {
+                "name" : "H2",
+                "content" : "<h2>H2</h2>"
+            },
+            {
+                "name" : "H3",
+                "content" : "<h3>H3</h3>"
+            },
+            {
+                "name" : "H4",
+                "content" : "<h4>H4</h4>"
+            }
+        ]
+    },
+
+    {
+        "groupName" : "Image",
+        "patterns" : [
+            {
+                "name" : "Full Width Image",
+                "content" : "<figure class=\"width-full\"><img src=\"media/images/default_image.jpg\" /><figcaption><span class=\"figure-designation\">Figure</span><span class=\"figure-enumeration\">X.X</span><span class=\"caption-title\">Title</span><span class=\"caption-body\">Caption</span><span class=\"caption-citation\">Citation</span></figcaption></figure>"
+            },
+            {
+                "name" : "Centered Image",
+                "content" : "<figure class=\"center\"><img src=\"../../img/.templates/stub-landscape.png\" /><figcaption><span class=\"figure-designation\">Figure</span><span class=\"figure-enumeration\">X.X</span><span class=\"caption-title\">Title</span><span class=\"caption-body\">Caption</span><span class=\"caption-citation\">Citation</span></figcaption></figure>"
+            }
+        ]
+
+    },
+
+    {
+        "groupName" : "List",
+        "patterns" : [
+            {
+                "name" : "Unordered List",
+                "content" : "<ul><li>First list item.</li><li>Second list item.</li><li>Third list item.</li><li>fourth list item.</li></ul>"
+            },
+            {
+                "name" : "Ordered List",
+                "content" : "<ol><li>First list item.</li><li>Second list item.</li><li>Third list item.</li><li>fourth list item.</li></ol>"
+            }
+        ]
+
+    },
+
+    {
+        "groupName" : "Table",
+        "patterns" : [
+            {
+                "name" : "Table",
+                "content" : "<table><thead><tr><td colspan=\"3\">Table Head</td></tr></thead><tbody><tr><td>Table Body Row 1 Col 1.</td><td>Table Body Row 1 Col 2</td><td>Table Body Row 1 Col 3</td></tr><tr><td>Table Body Row 2 Col 1</td><td>Table Body Row 2 Col 2</td><td>Table Body Row 2 Col 3</td></tr><tr><td>Table Body Row 3 Col 1.</td><td>Table Body Row 3 Col 2</td><td>Table Body Row 3 Col 3</td></tr><tr><td>Table Body Row 4 Col 1</td><td>Table Body Row 4 Col 2</td><td>Table Body Row 4 Col 3</td></tr></tbody><tfoot><tr><td colspan=\"3\">Table Footer</td></tr></tfoot></table>"
+            }
+        ]
+
+    }
+]

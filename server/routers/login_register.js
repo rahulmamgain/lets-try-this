@@ -11,11 +11,10 @@ var async = require('async');
 var moment = require('moment');
 const crypto = require('crypto');
 var validator = require('validator');
-var Data = require('../models/data_model');
 
 var config = require('../config/config');
 
-router.all('*', filters.logRequest, filters.verifyTimestamp, filters.verifyNonce);
+router.all('*', filters.verifyUser, filters.logRequest, filters.verifyTimestamp, filters.verifyNonce);
 
 /**
  * Logout

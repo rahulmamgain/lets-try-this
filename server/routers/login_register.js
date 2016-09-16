@@ -11,6 +11,7 @@ var async = require('async');
 var moment = require('moment');
 const crypto = require('crypto');
 var validator = require('validator');
+var uuid = require('uuid-v4');
 
 var config = require('../config/config');
 
@@ -210,6 +211,27 @@ router.post('/register', function(req, res, next) {
                 }
             })
                            
+        }, (user, callback) => {
+            var session = new LoginStatus.SessionModel({
+                ip : req.ip,
+                userAgent : req.user
+            });
+            //user.password = null;
+            var loginStatus = new LoginStatus.LoginStatusModel({
+                user : user.id,
+                token : uuid(),
+                createdOn : moment().toDate(),
+                session : session
+            });
+            LoginStatus.LoginStatusModel.create(loginStatus, (err, loginStatus) => {
+                if (err) {
+                    req.logger.debug('Error While Finding User ' + err.message);
+                    return callback(err);
+                }
+                loginStatus = loginStatus.toJSON();
+                loginStatus.user = user;
+                callback(null, loginStatus);
+            });
         }
     ],(err, user) => {
         try {

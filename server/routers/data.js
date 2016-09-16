@@ -15,6 +15,7 @@ var multer = require('multer');
 var multerS3 = require('multer-s3');
 var uuid = require('uuid-v4');
 var wkhtmltopdf = require('wkhtmltopdf');
+var fs = require('fs');
 
 aws.config.region = 'us-west-2';
 aws.config.update(
@@ -106,6 +107,23 @@ router.post("/getPdf/:id", (req, res, next) => {
 		wkhtmltopdf(req.body.url, {
 			'javascript-delay' : 2000
 		}, function(code, signal) {
+			console.log(code);
+		}).pipe(res);  
+	} catch(e) {
+		res.status(500).send({'error' : "An unexpected error has occured please try again" + e});
+	}
+});
+
+router.post("/getPdfFromHtmlString", (req, res, next) => {
+	if(!req.body) {
+		res.status(400).send({'error' : "please send a valid url {url : <>}"});
+		return;
+	}
+	res.setHeader('Content-Type', 'text/pdf');
+	try{
+		var filePath = './upload/' + uuid() + ".html";
+		fs.writeSync(filePath, req.body.html);
+		wkhtmltopdf(filePath, function(code, signal) {
 			console.log(code);
 		}).pipe(res);  
 	} catch(e) {

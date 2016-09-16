@@ -44,7 +44,7 @@ app.all('*', (req, res, next) => {
     next(); 
 });
 
-server.listen(3001, function() {
+server.listen(443, function() {
     console.log('Server Started...'); // eslint-disable-line no-console
     dbHandler.connect(dbSettings, (err) => {
         if (err) {

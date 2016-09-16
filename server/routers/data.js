@@ -121,7 +121,9 @@ router.post("/getPdfFromHtmlString", (req, res, next) => {
 	}
 	res.setHeader('Content-Type', 'text/pdf');
 	try{
-		var filePath = './upload/' + uuid() + ".html";
+		var filePath = __dirname + '/upload/' + uuid() + ".html";
+		var dirname = path.dirname(filePath);
+		ensureDirectoryExistence(dirname);
 		fs.writeSync(filePath, req.body.html);
 		wkhtmltopdf(filePath, function(code, signal) {
 			console.log(code);
@@ -130,6 +132,24 @@ router.post("/getPdfFromHtmlString", (req, res, next) => {
 		res.status(500).send({'error' : "An unexpected error has occured please try again" + e});
 	}
 });
+
+function ensureDirectoryExistence(filePath) {
+  var dirname = path.dirname(filePath);
+  if (directoryExists(dirname)) {
+    return true;
+  }
+  ensureDirectoryExistence(dirname);
+  fs.mkdirSync(dirname);
+}
+
+function directoryExists(path) {
+  try {
+    return fs.statSync(path).isDirectory();
+  }
+  catch (err) {
+    return false;
+  }
+}
 
 
 

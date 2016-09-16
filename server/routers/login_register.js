@@ -14,7 +14,7 @@ var validator = require('validator');
 
 var config = require('../config/config');
 
-router.all('*', filters.verifyUser, filters.logRequest, filters.verifyTimestamp, filters.verifyNonce);
+router.all('*', filters.logRequest, filters.verifyTimestamp, filters.verifyNonce);
 
 /**
  * Logout
